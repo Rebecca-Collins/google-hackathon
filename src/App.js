@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Header</p>
+      <p>home page</p>
+      <ul>
+        <li>Basic Info component</li>
+        <li>Contact info component</li>
+        <li>Accessibility component</li>
+        <li>Profiles component</li>
+        <li>General Preferences for the web</li>
+      </ul>
+      <p>accessibility page</p>
+        <div>Card with bunch of toggles for whatever disabilities UX gives us</div>
     </div>
   );
 }
 
 export default App;
+
