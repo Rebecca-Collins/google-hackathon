@@ -1,0 +1,68 @@
+.access {
+    display: flex;
+    flex-direction: column;
+
+    &__heading-container {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        font-weight: 500;
+        color: #202124;
+
+        &-text {
+            font-size: .875rem;
+            line-height: 20px;
+            color: #5F6368;
+        }
+
+        &--small {
+            font-size: 1.3125rem;
+            line-height: 1.75rem;
+            font-weight: 500;
+        }
+    }
+
+    &__hero {
+        display: flex;
+        padding: 2.5rem 5rem;
+        width: 75%;
+        align-self: flex-end;
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-heading {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            font-weight: 500;
+            color: #202124;
+        }
+
+        &-text {
+            font-size: .875rem;
+            line-height: 20px;
+            color: #5F6368;
+        }
+    }
+
+    &__toolbar {
+        display: flex;
+        flex-direction: column;
+
+        &-toggle {
+            width: 3rem;
+        }
+    }
+}
+
+.blue {
+    color: #4285F4;
+}
