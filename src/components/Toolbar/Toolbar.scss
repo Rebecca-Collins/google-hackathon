@@ -1,0 +1,32 @@
+@use '../../styles/colors' as *;
+
+
+.toolbar {
+    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  &-heading {
+    font-size: 1.3125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: $text-black;
+    margin: 0;
+  }
+
+  &-text {
+    font-size: .875rem;
+    line-height: 20px;
+    color: $text-grey;
+    margin: 0;
+  }
+
+  &-toggle {
+    width: 3rem;
+  }
+}
+
+.blue {
+    color: $blue;
+}
