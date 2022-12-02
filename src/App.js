@@ -5,17 +5,20 @@ import Header from './components/Header/Header.js';
 // import {useState} from 'react';
 
 function App() {
-  //Create a state for largerText
-  //create handle for larger text
-    //handleLargeText
-      //setLargeText(true)
+  const [largeText, setLargeText] = useState(false);
+  const handleLargeText = () => {
+    setLargeText(!largeText)
+  }
+  console.log(largeText)
   
   return (
-    <div className="App">
+    <div className={`App ${largeText ? 'large-text' : ''}`}>
       <BrowserRouter>
-        <Header />
+        <Header
+          handleLargeText={handleLargeText}
+        />
         <Routes>
-          <Route path='/' element={<AccessibilityPage />} />
+          <Route path='/' element={<AccessibilityPage largeText={largeText} />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -23,16 +26,3 @@ function App() {
 }
 
 export default App;
-
-/* <p>home page</p>
-      <ul>
-        <li>Basic Info component</li>
-        <li>Contact info component</li>
-        <li>Accessibility component</li>
-        <li>Profiles component</li>
-        <li>General Preferences for the web</li>
-      </ul>
-      <p>accessibility page</p>
-        <div>Card with bunch of toggles for whatever disabilities UX gives us</div> */
-    
-

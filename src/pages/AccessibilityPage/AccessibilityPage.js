@@ -6,17 +6,17 @@ import AccessProfile from '../../components/AccessProfile/AccessProfile';
 import AccessInfo from '../../components/AccessInfo/AccessInfo';
 import HelpContainer from '../../components/HelpContainer/HelpContainer';
 
-function AccessibilityPage() {
+function AccessibilityPage({largeText}) {
 
     return (
         <main className='page__container'>
             <Sidebar />
             <section main='access'>
-                <AccessHeading />
+                <AccessHeading  />
                 <Toolbar />
                 <AccessProfile />
                 <AccessInfo />
-                <HelpContainer/>
+                <HelpContainer />
             </section>
         </main>
     );

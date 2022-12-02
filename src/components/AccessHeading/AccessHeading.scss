@@ -13,19 +13,19 @@
     }
 
     &__heading {
-        font-size: 1.75rem;
+        // font-size: 1.75rem;
         line-height: 2.25rem;
         font-weight: 500;
         color: $text-black;
 
         &-text {
-            font-size: .875rem;
+            // font-size: .875rem;
             line-height: 20px;
             color: $text-grey;
         }
 
         &--small {
-            font-size: 1.3125rem;
+            // font-size: 1.3125rem;
             line-height: 1.75rem;
             font-weight: 500;
         }
@@ -40,6 +40,7 @@
         &-container {
             display: flex;
             flex-direction: column;
+            width: 60%;
         }
 
         &-heading {
@@ -50,13 +51,19 @@
         }
 
         &-text {
-            font-size: .875rem;
+            // font-size: .875rem;
             line-height: 20px;
             color: $text-grey;
         }
 
         &-image {
             width: 15rem;
+            margin-left: 2rem;
         }
     }
 }
+
+
+.large-text {
+    font-size: calc(100% + .25rem);
+  }
