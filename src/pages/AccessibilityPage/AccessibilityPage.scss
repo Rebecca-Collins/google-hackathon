@@ -1,0 +1,17 @@
+@use '../../styles/colors' as *;
+
+
+
+.page__container{
+    display: flex;
+    padding: 0 2.25rem;
+}
+
+.access {
+    display: flex;
+    flex-direction: column;
+}
+
+.blue {
+    color: $blue;
+}

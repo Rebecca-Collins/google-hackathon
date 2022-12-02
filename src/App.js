@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/accessibility' element={<AccessibilityPage />} />
+          <Route path='/' element={<AccessibilityPage />} />
         </Routes>
       </BrowserRouter>
     </div>

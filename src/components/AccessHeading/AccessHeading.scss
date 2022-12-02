@@ -1,0 +1,58 @@
+@use '../../styles/colors' as *; 
+
+.access {
+    display: flex;
+    flex-direction: column;
+
+    &__heading-container {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        font-weight: 500;
+        color: $text-black;
+
+        &-text {
+            font-size: .875rem;
+            line-height: 20px;
+            color: $text-grey;
+        }
+
+        &--small {
+            font-size: 1.3125rem;
+            line-height: 1.75rem;
+            font-weight: 500;
+        }
+    }
+
+    &__hero {
+        display: flex;
+        margin-top: 3rem;
+        width: 100%;
+        align-self: flex-end;
+        gap: 5rem;
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-heading {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            font-weight: 500;
+            color: $text-black;
+        }
+
+        &-text {
+            font-size: .875rem;
+            line-height: 20px;
+            color: $text-grey;
+        }
+    }
+}
