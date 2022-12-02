@@ -4,37 +4,114 @@ import colorblind from '../../assets/images/color-modal.svg';
 import text from '../../assets/images/text-modal.svg';
 import accessLogo from '../../assets/images/accessibility_logo.svg';
 import toggleOff from '../../assets/icons/toggle_off.svg';
+import {useState, useEffect} from 'react';
 
-function AccessModal(props) {
-    if(!props.show) {
+function AccessModal({show, onClose}) {
+    const accessInfo = [
+        {
+            type: 'adhd',
+            heading: 'Screen Element Reduction',
+            content: 'This option reduces the amount of information shown on your screen'
+        },
+
+        {
+            type: 'color',
+            heading: 'Change Color Contrast',
+            content: 'This option allows you to change the color contrast of the page.'
+        },
+
+        {
+            type: 'text',
+            heading: 'Change Text Size',
+            content: 'This option allows you to increase or decrease font size.'
+        }
+    ]
+
+    const [active, setActive] = useState({
+        adhd: false,
+        color: false,
+        text: false
+    })
+
+    const [display, setDisplay] = useState([])
+
+    useEffect(() => {
+        if(active.adhd) {
+            setDisplay(accessInfo[0])
+        } else if (active.color) {
+            setDisplay(accessInfo[1])
+        } else if (active.text) {
+            setDisplay(accessInfo[2])
+        } else {
+            setDisplay({})
+        }
+    }, [active])
+
+    const handleClick= (string) => {
+        if (string === 'adhd') {
+            setActive({
+                ...active,
+                adhd: true,
+                color: false,
+                text: false
+            });
+        }
+
+        if (string === 'color') {
+            setActive({
+                ...active,
+                adhd: false,
+                color: true,
+                text: false
+            })
+        }
+
+        if (string === 'text') {
+            setActive({
+                ...active,
+                adhd: false,
+                color: false,
+                text: true
+            })
+        }
+    }
+
+    const [toggle, setToggle] = useState(false)
+    const triggerToggle = () => {
+        setToggle(!toggle)
+    }
+    
+    if(!show) {
         return(
             null
         )
     }
+
+
     return (
         <div className='modal'>
             <div className='modal__top'>
-                <div className='modal__avatar clicked'>
+                <div onClick={() => handleClick('adhd')} className={`modal__avatar ${active.adhd ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={adhd} alt='adhd avatar'/>
                     <p className='modal__avatar-text'>ADHD</p>
                 </div>
-                <div className='modal__avatar'>
+                <div onClick={() => handleClick('color')} className={`modal__avatar ${active.color ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={colorblind} alt='colorblind avatar'/>
                     <p className='modal__avatar-text'>Color</p>
                 </div>
-                <div className='modal__avatar'>
+                <div onClick={() => handleClick('text')} className={`modal__avatar ${active.text ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={text} alt='blind avatar'/>
                     <p className='modal__avatar-text'>Text</p>
                 </div>
                 <img className='modal__logo' src={accessLogo} alt='google accessibility logo' />
-                <button className='modal__close' onClick={props.onClose}></button>
+                <button className='modal__close' onClick={onClose}></button>
             </div>
             <div className='modal__bottom'>
                 <div className='modal__bottom-container'>
-                    <h3 className='modal__bottom-heading'>Screen Element Reduction</h3>
-                    <img className='modal__bottom-toggle' src={toggleOff} alt="toggle in off position" />
+                    <h3 className='modal__bottom-heading'>{display.heading}</h3>
+                    <img  onClick={triggerToggle} className='modal__bottom-toggle' src={toggleOff} alt="toggle in off position" />
                 </div>
-                <p className='modal__bottom-text'>This option reduces the amount of information shown on your screen</p>
+                <p className='modal__bottom-text'>{display.content}</p>
                 <p className='modal__bottom-text blue'>Learn More</p>
 
             </div>

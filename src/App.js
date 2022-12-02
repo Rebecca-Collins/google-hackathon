@@ -4,6 +4,7 @@ import AccessibilityPage from './pages/AccessibilityPage/AccessibilityPage';
 import Header from './components/Header/Header.js';
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
