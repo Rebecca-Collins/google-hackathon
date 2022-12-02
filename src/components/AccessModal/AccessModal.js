@@ -8,6 +8,7 @@ import toggleOn from '../../assets/icons/toggle_on_2.svg';
 import {useState, useEffect} from 'react';
 
 function AccessModal({show, onClose}) {
+
     const accessInfo = [
         {
             type: 'Visual Clarity',
@@ -92,6 +93,7 @@ function AccessModal({show, onClose}) {
         )
     }
 
+    
 
     return (
         <div id="color" className='modal'>
