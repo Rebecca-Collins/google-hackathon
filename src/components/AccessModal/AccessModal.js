@@ -80,7 +80,6 @@ function AccessModal({show, onClose}) {
     const [toggle, setToggle] = useState(false)
     const triggerToggle = () => {
         setToggle(!toggle)
-        console.log(toggle)
     }
     
     if(!show) {
