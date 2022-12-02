@@ -30,7 +30,7 @@
         background-position-x: left;
         background-position-y: center;
         height: 2.5rem;
-        width: 77%;
+        width: 70%;
         margin-left: 1.5rem;
     }
 
@@ -39,6 +39,7 @@
     }
 
     &__container--right {
+        position: relative;
         display: flex;
         gap: .75rem;
         align-items: center;

@@ -1,0 +1,96 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 8.15rem;
+    top: .65rem;
+    height: 15rem;
+    width: 25rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 2px 3px 5px rgb(173, 171, 171);
+
+    &__top {
+        position: relative;
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 1rem 0 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $border-grey;
+    }
+
+    &__avatar {
+        display: flex;
+        flex-direction: column;
+        background-color: $text-grey;
+        border-radius: 1rem;
+        border: none;
+        width: 17%;
+        height: 5rem;
+
+        &-image {
+            align-self: center;
+            padding-top: .5rem;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &-text {
+            align-self: center;
+            font-size: .875rem;
+            line-height: 20px;
+            color: white;
+            margin: .5rem 0 0 0;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        width: 4rem;
+        right: 1rem;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+
+        &-container {
+            display: flex;
+            align-items: center;
+        }
+
+        &-heading {
+            margin: 0;
+        }
+
+        &-text {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            width: 90%;
+        }
+
+        &-toggle {
+            justify-self: flex-end;
+            margin-left: auto;
+        }
+    }
+
+    &__close {
+        margin-left: auto;
+        margin-right: 1rem;
+        background-color: white;
+        border: none;
+        color: $blue;
+        font-family: 'roboto';
+    }
+}
+
+.clicked {
+    background-color: $blue;
+}
