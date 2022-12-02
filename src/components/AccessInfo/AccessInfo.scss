@@ -1,0 +1,72 @@
+@use '../../styles/colors' as *;
+
+.access__info {
+    display: flex;
+    flex-direction: column;
+
+    &-heading {
+        font-size: 1.3125rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        color: $text-black;
+        margin: 2rem 0 0 0;
+    }
+
+    &-text {
+        font-size: .875rem;
+        line-height: 20px;
+        color: $text-grey;
+        margin: 0;
+    }
+
+    &-container {
+        display: flex;
+        width: 100%;
+    }
+
+    &-table {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        &-single {
+            display: flex;
+            padding: 1rem 0;
+            border-bottom: 1px solid $border-grey;
+            gap:5rem;
+        }
+    }
+
+    &-edit {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: auto;
+    }
+}
+
+.access__table-text {
+    font-size: .875rem;
+    line-height: 20px;
+    color: $text-grey;
+    margin: 0;
+    width: 15%;
+
+    &-description {
+        font-size: .875rem;
+        line-height: 20px;
+        color: $text-grey;
+        margin: 0;
+    }
+}
+
+.blue {
+    color: $blue;
+}
+
+.special {
+    margin-left: auto;
+}
+
+.no-border {
+    border-bottom: none;
+}
