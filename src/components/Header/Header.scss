@@ -27,15 +27,23 @@
         background-image: url('../../assets/icons/search.svg');
         background-repeat: no-repeat;
         background-size: 2rem;
-        background-position-x: left;
+        background-position-x: 2%;
         background-position-y: center;
         height: 2.5rem;
         width: 70%;
         margin-left: 1.5rem;
+        border-radius: .375rem;
+
+
+&::placeholder {
+    padding-left: 3.125rem;
+    color: $text-grey;
+}
     }
 
     &__logo {
         width: 6rem;
+        mix-blend-mode: color-burn;
     }
 
     &__container--right {
@@ -76,5 +84,13 @@
         background-position-y: center;
         background-position-x: center;
         box-shadow: 2px 3px 5px rgb(173, 171, 171);
+        
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1); 
+        }
+
     }
+
 }

@@ -7,6 +7,7 @@ import AccessInfo from '../../components/AccessInfo/AccessInfo';
 import HelpContainer from '../../components/HelpContainer/HelpContainer';
 
 function AccessibilityPage() {
+
     return (
         <main className='page__container'>
             <Sidebar />

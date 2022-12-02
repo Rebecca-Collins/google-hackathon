@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import './AccessModal.scss';
 import adhd from '../../assets/images/adhd-modal.svg';
 import colorblind from '../../assets/images/color-modal.svg';
@@ -90,7 +91,7 @@ function AccessModal({show, onClose}) {
 
 
     return (
-        <div className='modal'>
+        <div id="color" className='modal'>
             <div className='modal__top'>
                 <div onClick={() => handleClick('adhd')} className={`modal__avatar ${active.adhd ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={adhd} alt='adhd avatar'/>
