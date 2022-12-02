@@ -2,9 +2,12 @@ import './Header.scss';
 import logo from '../../assets/images/google_logo.jpg';
 import help from '../../assets/icons/help.svg';
 import app from '../../assets/icons/apps.svg';
-import Modal from "../../components/Modal/Modal"
+// import { useState } from "react";
+
+
 
 function Header() {
+ 
     return(
         <div className='header'>
             <div className='header__container--left'>
@@ -13,7 +16,7 @@ function Header() {
                 <input className='header__search' type='text'></input>
             </div>
             <div>
-
+    
             </div>
             <div className='header__container--right'>
                 <button className='header__access-button'></button>
