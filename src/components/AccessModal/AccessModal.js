@@ -27,6 +27,7 @@ function AccessModal(props) {
                     <p className='modal__avatar-text'>Text</p>
                 </div>
                 <img className='modal__logo' src={accessLogo} alt='google accessibility logo' />
+                <button className='modal__close' onClick={props.onClose}></button>
             </div>
             <div className='modal__bottom'>
                 <div className='modal__bottom-container'>
@@ -37,7 +38,7 @@ function AccessModal(props) {
                 <p className='modal__bottom-text blue'>Learn More</p>
 
             </div>
-            <button className='modal__close' onClick={props.onClose}>Close</button>
+            
         </div>
     );
 };
