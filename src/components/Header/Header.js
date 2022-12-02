@@ -12,6 +12,7 @@ function Header() {
                 <input className='header__search' type='text'></input>
             </div>
             <div className='header__container--right'>
+                <button className='header__access-button'></button>
                 <img className='header__help' src={help} alt='question mark inside of circle' />
                 <img className='header__app' src={app} alt='three by three grid of circles' />
                 <div className='header__avatar'></div>

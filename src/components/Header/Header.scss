@@ -62,4 +62,18 @@
         background-color: $avatar;
         border-radius: 50%;
     }
+
+    &__access-button {
+        width: 6.5rem;
+        height: 2.5rem;
+        border-radius: 2.5rem;
+        border: none;
+        background-color: white;
+        background-image: url('../../assets/images/accessibility_logo.svg');
+        background-size: 2.4rem;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        box-shadow: 2px 3px 5px rgb(173, 171, 171);
+    }
 }
