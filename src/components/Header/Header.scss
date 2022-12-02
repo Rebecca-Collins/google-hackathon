@@ -1,5 +1,5 @@
-@use '../../styles/fonts';
-@use '../../styles/colors';
+@use '../../styles/fonts' as *;
+@use '../../styles/colors' as *;
 
 .header {
     display: flex;
@@ -17,13 +17,13 @@
         font-family: 'roboto';
         font-weight: 400;
         font-size: 2rem;
-        color: rgb(95, 99, 104);     
+        color: $text-grey;     
     }
 
     &__search {
         border-radius: 4px;
         border: none;
-        background-color: rgb(241, 243, 244);
+        background-color: $search-bar;
         background-image: url('../../assets/icons/search.svg');
         background-repeat: no-repeat;
         background-size: 2rem;
@@ -59,7 +59,7 @@
     &__avatar {
         width: 2.5rem;
         height: 2.5rem;
-        background-color: rgb(95, 99, 104);
+        background-color: $avatar;
         border-radius: 50%;
     }
 }

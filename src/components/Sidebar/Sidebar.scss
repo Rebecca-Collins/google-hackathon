@@ -1,0 +1,40 @@
+@use "../../styles/colors" as *;
+
+
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    width: 21.875rem;
+
+    &__icon{
+        width: 1.8125rem;
+        height: 1.8125rem;
+        aspect-ratio: 3/2; 
+        object-fit: contain;
+    }
+
+    &__active{
+        width:18.75rem;
+        border-radius: 0 1.5625rem 1.5625rem 0;
+        background-color: $blue-active;
+        color: $blue;
+    }
+
+    &__content{
+        display:flex;
+        align-items: center;
+        gap: .625rem;
+    }
+
+    &__border-bottom{
+        border-bottom: 1px solid $text-grey;
+        width: 18.75rem;
+    }
+}
+
+p {
+    font-weight: 500;
+}
+
+
+
