@@ -38,5 +38,10 @@
 .avatar-image {
     width: 3.75rem;
     height: 3.75rem;
-    cursor: pointer;
+    
+
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
 }
