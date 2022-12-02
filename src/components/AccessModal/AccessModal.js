@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import './AccessModal.scss';
 import adhd from '../../assets/images/adhd-modal.svg';
 import colorblind from '../../assets/images/color-modal.svg';
