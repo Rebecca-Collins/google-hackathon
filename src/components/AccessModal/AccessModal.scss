@@ -31,6 +31,11 @@
         width: 17%;
         height: 5rem;
 
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1); 
+        }      
+
         &-image {
             align-self: center;
             padding-top: .5rem;
@@ -98,6 +103,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         font-family: 'roboto';
+        cursor: pointer;
     }
 }
 

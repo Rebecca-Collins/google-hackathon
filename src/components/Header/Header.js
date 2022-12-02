@@ -5,6 +5,7 @@ import app from '../../assets/icons/apps.svg';
 import AccessModal from '../AccessModal/AccessModal';
 import {useState} from 'react';
 
+
 function Header() {
 
     const [show, setShow] = useState(false);
@@ -14,10 +15,10 @@ function Header() {
             <div className='header__container--left'>
                 <img className='header__logo' src={logo} alt='google logo' />
                 <h2 className='header__text'>Account</h2>
-                <input className='header__search' type='text'></input>
+                <input className='header__search' type='text' placeholder='Search Google Account'></input>
             </div>
             <div>
-    
+   
             </div>
             <div className='header__container--right'>
                 <button 
