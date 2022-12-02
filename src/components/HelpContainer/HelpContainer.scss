@@ -1,11 +1,11 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/fonts" as *;
+@use "../../styles/colors" as *;
 
 .help{
-    border: 1px solid grey;
+    border: 1px solid $border-grey;
     border-radius: .5625rem;
     width: 50rem;
-    margin:auto;
 
     &__header{
         padding-left: 1.875rem;
@@ -21,7 +21,7 @@
     
     &__content{
         display:flex;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $border-grey;
         margin-left: 1.5rem;
         align-items: center;
         gap: 1rem;
