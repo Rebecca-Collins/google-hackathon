@@ -2,8 +2,13 @@ import './App.scss';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AccessibilityPage from './pages/AccessibilityPage/AccessibilityPage';
 import Header from './components/Header/Header.js';
+import {useState} from 'react';
 
 function App() {
+  //Create a state for largerText
+  //create handle for larger text
+    //handleLargeText
+      //setLargeText(true)
   
   return (
     <div className="App">

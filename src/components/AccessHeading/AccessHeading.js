@@ -1,5 +1,5 @@
 import "./AccessHeading.scss";
-import heroImage from "../../assets/images/hero_image.svg";
+import heroImage from "../../assets/images/hero-image-2.svg";
 
 function AccessHeading() {
   return (

@@ -10,9 +10,9 @@ import {useState, useEffect} from 'react';
 function AccessModal({show, onClose}) {
     const accessInfo = [
         {
-            type: 'adhd',
-            heading: 'Screen Element Reduction',
-            content: 'This option reduces the amount of information shown on your screen'
+            type: 'Visual Clarity',
+            heading: 'Increase Screen Clarity',
+            content: 'This option highlights important features and information on the page.'
         },
 
         {
@@ -29,7 +29,7 @@ function AccessModal({show, onClose}) {
     ]
 
     const [active, setActive] = useState({
-        adhd: false,
+        clarity: false,
         color: false,
         text: false
     })
@@ -37,7 +37,7 @@ function AccessModal({show, onClose}) {
     const [display, setDisplay] = useState([])
 
     useEffect(() => {
-        if(active.adhd) {
+        if(active.clarity) {
             setDisplay(accessInfo[0])
         } else if (active.color) {
             setDisplay(accessInfo[1])
@@ -48,11 +48,11 @@ function AccessModal({show, onClose}) {
         }
     }, [active])
 
-    const handleClick= (string) => {
-        if (string === 'adhd') {
+    const handleClick = (string) => {
+        if (string === 'clarity') {
             setActive({
                 ...active,
-                adhd: true,
+                clarity: true,
                 color: false,
                 text: false
             });
@@ -61,7 +61,7 @@ function AccessModal({show, onClose}) {
         if (string === 'color') {
             setActive({
                 ...active,
-                adhd: false,
+                clarity: false,
                 color: true,
                 text: false
             })
@@ -70,7 +70,7 @@ function AccessModal({show, onClose}) {
         if (string === 'text') {
             setActive({
                 ...active,
-                adhd: false,
+                clarity: false,
                 color: false,
                 text: true
             })
@@ -81,6 +81,10 @@ function AccessModal({show, onClose}) {
     const triggerToggle = () => {
         setToggle(!toggle)
     }
+
+    //if(active.text && toggle) {
+        //handleLargeText()
+    //}
     
     if(!show) {
         return(
@@ -92,9 +96,9 @@ function AccessModal({show, onClose}) {
     return (
         <div id="color" className='modal'>
             <div className='modal__top'>
-                <div onClick={() => handleClick('adhd')} className={`modal__avatar ${active.adhd ? 'clicked' : ''}`}>
+                <div onClick={() => handleClick('clarity')} className={`modal__avatar ${active.clarity ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={adhd} alt='adhd avatar'/>
-                    <p className='modal__avatar-text'>ADHD</p>
+                    <p className='modal__avatar-text'>Clarity</p>
                 </div>
                 <div onClick={() => handleClick('color')} className={`modal__avatar ${active.color ? 'clicked' : ''}`}>
                     <img className='modal__avatar-image' src={colorblind} alt='colorblind avatar'/>
