@@ -1,0 +1,43 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/fonts" as *;
+
+.help{
+    border: 1px solid grey;
+    border-radius: .5625rem;
+    width: 50rem;
+    margin:auto;
+
+    &__header{
+        padding-left: 1.875rem;
+        font-weight: 400;
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        padding-bottom: 1.875rem;
+    }
+
+    &__icons{
+        @include icon;
+    }
+    
+    &__content{
+        display:flex;
+        border-bottom: 1px solid grey;
+        margin-left: 1.5rem;
+        align-items: center;
+        gap: 1rem;
+        padding: .4375rem 0;
+    }
+
+    &__no-border{
+        border:none;
+        margin-left: 1.5rem;
+        align-items: center;
+        gap: 1rem;
+        display:flex;
+        padding: .4375rem 0;
+    }
+
+}
+
+
+
