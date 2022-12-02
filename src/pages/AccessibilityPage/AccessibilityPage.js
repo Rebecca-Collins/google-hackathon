@@ -10,12 +10,12 @@ function AccessibilityPage() {
     return (
         <main className='page__container'>
             <Sidebar />
-                <section main='access'>
-                    <AccessHeading />
-                    <Toolbar />
-                    <AccessProfile />
-                    <AccessInfo />
-                    <HelpContainer/>
+            <section main='access'>
+                <AccessHeading />
+                <Toolbar />
+                <AccessProfile />
+                <AccessInfo />
+                <HelpContainer/>
             </section>
         </main>
     );

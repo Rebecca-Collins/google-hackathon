@@ -22,7 +22,6 @@
     }
 
     &__search {
-        border-radius: 4px;
         border: none;
         background-color: $search-bar;
         background-image: url('../../assets/icons/search.svg');
@@ -31,36 +30,50 @@
         background-position-x: left;
         background-position-y: center;
         height: 2.5rem;
-        width: 70%;
-        margin-left: 2rem;
+        width: 77%;
+        margin-left: 1.5rem;
     }
 
     &__logo {
-        width: 8rem;
+        width: 6rem;
     }
 
     &__container--right {
         display: flex;
-        gap: 1.5rem;
+        gap: .75rem;
         align-items: center;
         justify-content: flex-end;
         width: 20%;
     }
 
     &__help {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     &__app {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
     }
 
     &__avatar {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         background-color: $avatar;
         border-radius: 50%;
+    }
+
+    &__access-button {
+        width: 6.5rem;
+        height: 2.5rem;
+        border-radius: 2.5rem;
+        border: none;
+        background-color: white;
+        background-image: url('../../assets/images/accessibility_logo.svg');
+        background-size: 2.4rem;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        box-shadow: 2px 3px 5px rgb(173, 171, 171);
     }
 }

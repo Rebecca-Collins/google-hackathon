@@ -22,7 +22,7 @@ function AccessHeading() {
             settings stored in one place.
           </p>
         </div>
-        <img
+        <img className="access__hero-image"
           src={heroImage}
           alt="id card split in half with pictures on the other side"
         />
