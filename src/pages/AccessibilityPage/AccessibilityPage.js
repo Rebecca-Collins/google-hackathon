@@ -6,7 +6,7 @@ import AccessProfile from '../../components/AccessProfile/AccessProfile';
 import AccessInfo from '../../components/AccessInfo/AccessInfo';
 import HelpContainer from '../../components/HelpContainer/HelpContainer';
 
-function AccessibilityPage({largeText}) {
+function AccessibilityPage({handleLargeText}) {
 
     return (
         <main className='page__container'>
@@ -14,7 +14,8 @@ function AccessibilityPage({largeText}) {
             <section main='access'>
                 <AccessHeading  />
                 <Toolbar />
-                <AccessProfile />
+                <AccessProfile
+                    handleLargeText={handleLargeText} />
                 <AccessInfo />
                 <HelpContainer />
             </section>

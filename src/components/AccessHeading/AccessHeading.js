@@ -1,7 +1,7 @@
 import "./AccessHeading.scss";
 import heroImage from "../../assets/images/hero-image-2.svg";
 
-function AccessHeading({largeText}) {
+function AccessHeading() {
 
   return (
     <section>
