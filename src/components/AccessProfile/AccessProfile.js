@@ -6,13 +6,13 @@ import blindAvatar from '../../assets/images/blind-avatar.svg';
 import { useState } from "react"
 import AccessModal from "../../components/AccessModal/AccessModal"
 
-function AccessProfile() {
+function AccessProfile({handleLargeText}) {
 
     const [show, setShow] = useState(false);
 
       const onClick = () =>{
         window.scrollTo({ top: 0, behavior: "smooth" });
-        setShow(true)
+        setShow(true);
     }
     
     return (
@@ -23,6 +23,7 @@ function AccessProfile() {
                     <img onClick={onClick} className='avatar-image' src={screenClarityAvatar} alt='add avatar' />
                     <p className='access__profile-text'>Screen Clarity</p>
                     <AccessModal
+                    handleLargeText={handleLargeText}
                     show={show}
                     onClose={() => setShow(false)}
                 />
