@@ -7,7 +7,7 @@ import toggleOff from '../../assets/icons/toggle_off.svg';
 import toggleOn from '../../assets/icons/toggle_on_2.svg';
 import {useState, useEffect} from 'react';
 
-function AccessModal({show, onClose}) {
+function AccessModal({show, onClose, handleLargeText}) {
     const accessInfo = [
         {
             type: 'Visual Clarity',
@@ -79,12 +79,18 @@ function AccessModal({show, onClose}) {
 
     const [toggle, setToggle] = useState(false)
     const triggerToggle = () => {
-        setToggle(!toggle)
+        if(active.text) {
+            setToggle(!toggle)
+        }
     }
 
-    //if(active.text && toggle) {
-        //handleLargeText()
-    //}
+    useEffect(() => {
+        if(active.text && toggle) {
+            handleLargeText();
+        } else if (active.text && !toggle) {
+            handleLargeText();
+        }
+    }, [toggle])
     
     if(!show) {
         return(

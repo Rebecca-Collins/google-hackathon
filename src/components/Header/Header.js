@@ -6,7 +6,7 @@ import AccessModal from '../AccessModal/AccessModal';
 import {useState} from 'react';
 
 
-function Header() {
+function Header({handleLargeText}) {
 
     const [show, setShow] = useState(false);
 
@@ -14,7 +14,7 @@ function Header() {
         <div className='header'>
             <div className='header__container--left'>
                 <img className='header__logo' src={logo} alt='google logo' />
-                <h2 className='header__text'>Account</h2>
+                <h3 className='header__text'>Account</h3>
                 <input className='header__search' type='text' placeholder='Search Google Account'></input>
             </div>
             <div>
@@ -25,7 +25,8 @@ function Header() {
                     className='header__access-button'
                     onClick={() => setShow(true)}
                 ></button>
-                <AccessModal 
+                <AccessModal
+                    handleLargeText={handleLargeText}
                     show={show}
                     onClose={() => setShow(false)}
                 />

@@ -7,7 +7,7 @@ function HelpContainer() {
   return (
     
       <div className="help">
-        <h3 className="help__header">Looking for something else?</h3>
+        <h2 className="help__header">Looking for something else?</h2>
         <div className="help__content">
           <img className="help__icons" src={search} alt={search}/>
           <p> Seach Google Account</p>

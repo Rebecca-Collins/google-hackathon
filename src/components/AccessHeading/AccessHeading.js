@@ -1,12 +1,13 @@
 import "./AccessHeading.scss";
 import heroImage from "../../assets/images/hero-image-2.svg";
 
-function AccessHeading() {
+function AccessHeading({largeText}) {
+
   return (
-    <>
+    <section>
       <div className="access__heading-container">
         <h2 className="access__heading">Accessibility Info</h2>
-        <p className="access__heading-text">
+        <p className='access__heading-text'>
           Info about you and your accessibility needs across Google services
         </p>
       </div>
@@ -27,7 +28,7 @@ function AccessHeading() {
           alt="id card split in half with pictures on the other side"
         />
       </div>
-    </>
+    </section>
   );
 };
 
