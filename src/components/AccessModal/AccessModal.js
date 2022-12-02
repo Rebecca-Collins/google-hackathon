@@ -4,6 +4,7 @@ import colorblind from '../../assets/images/color-modal.svg';
 import text from '../../assets/images/text-modal.svg';
 import accessLogo from '../../assets/images/accessibility_logo.svg';
 import toggleOff from '../../assets/icons/toggle_off.svg';
+import toggleOn from '../../assets/icons/toggle_on_2.svg';
 import {useState, useEffect} from 'react';
 
 function AccessModal({show, onClose}) {
@@ -79,6 +80,7 @@ function AccessModal({show, onClose}) {
     const [toggle, setToggle] = useState(false)
     const triggerToggle = () => {
         setToggle(!toggle)
+        console.log(toggle)
     }
     
     if(!show) {
@@ -109,7 +111,8 @@ function AccessModal({show, onClose}) {
             <div className='modal__bottom'>
                 <div className='modal__bottom-container'>
                     <h3 className='modal__bottom-heading'>{display.heading}</h3>
-                    <img  onClick={triggerToggle} className='modal__bottom-toggle' src={toggleOff} alt="toggle in off position" />
+                    <img  onClick={triggerToggle} className={`modal__bottom-toggle ${toggle ? 'off' : ''}`} src={toggleOff} alt="toggle in off position" />
+                    <img onClick={triggerToggle} className={`modal__bottom-toggle ${toggle ? '' : 'off'}`} src={toggleOn} alt = "toggle in on position" />
                 </div>
                 <p className='modal__bottom-text'>{display.content}</p>
                 <p className='modal__bottom-text blue'>Learn More</p>
