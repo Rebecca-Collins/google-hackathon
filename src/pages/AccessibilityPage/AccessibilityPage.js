@@ -4,6 +4,7 @@ import AccessHeading from '../../components/AccessHeading/AccessHeading';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import AccessProfile from '../../components/AccessProfile/AccessProfile';
 import AccessInfo from '../../components/AccessInfo/AccessInfo';
+import HelpContainer from '../../components/HelpContainer/HelpContainer';
 
 function AccessibilityPage() {
     return (
@@ -14,6 +15,7 @@ function AccessibilityPage() {
                 <Toolbar />
                 <AccessProfile />
                 <AccessInfo />
+                <HelpContainer/>
             </section>
         </main>
     );

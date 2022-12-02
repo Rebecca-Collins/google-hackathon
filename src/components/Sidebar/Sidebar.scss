@@ -1,5 +1,5 @@
 @use "../../styles/colors" as *;
-
+@use "../../styles/mixins" as *;
 
 .sidebar{
     display:flex;
@@ -7,10 +7,7 @@
     width: 21.875rem;
 
     &__icon{
-        width: 1.8125rem;
-        height: 1.8125rem;
-        aspect-ratio: 3/2; 
-        object-fit: contain;
+        @include icon;
     }
 
     &__active{
@@ -27,7 +24,7 @@
     }
 
     &__border-bottom{
-        border-bottom: 1px solid $text-grey;
+        border-bottom: 1px solid $border-grey;
         width: 18.75rem;
     }
 }
