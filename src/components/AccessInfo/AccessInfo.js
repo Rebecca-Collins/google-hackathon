@@ -20,7 +20,7 @@ function AccessInfo() {
             </div>
             <div className="access__info-table-single">
                 <p className="access__table-text">Color Blindness</p>
-                <p className="access__table-text-description">Red/Green Blindness - Color COntrast Setting: RG</p>
+                <p className="access__table-text-description">Red/Green Blindness - Color Contrast Setting: RG</p>
                 <img className="access__info-edit" src={editIcon} alt='pencil' />
             </div>
             <div className="access__info-table-single">
